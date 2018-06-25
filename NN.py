@@ -24,10 +24,6 @@ data = get_mnist_data()
 for k, v in list(data.items()):
     print(('%s: ' % k, v.shape))
 
-#############################################################################################################
-# TODO (1) Open the file nn/layers.py and implement the fc_forward function.
-#############################################################################################################
-
 # Test the fc_forward function
 num_inputs = 2
 input_shape = (4, 5, 6)
@@ -50,9 +46,8 @@ print('difference: ', rel_error(out, correct_out))
 
 assert rel_error(out, correct_out) < 1e-9
 
-#############################################################################################################
-# TODO (2) Implement the fc_backward function and test your implementation using numeric gradient checking.
-#############################################################################################################
+
+# Implement the fc_backward function and test implementation using numeric gradient checking.
 
 # Test the fc_backward function
 np.random.seed(231)
@@ -78,9 +73,8 @@ assert rel_error(dx_num, dx) < 1e-9
 assert rel_error(dw_num, dw) < 1e-9
 assert rel_error(db_num, db) < 1e-11
 
-##########################################################################################################################################################
-# TODO (3) Implement the forward pass for the ReLU activation function in the relu_forward function and test your implementation using the following.
-##########################################################################################################################################################
+
+# Implement the forward pass for the ReLU activation function in the relu_forward function 
 
 # Test the relu_forward function
 
@@ -131,9 +125,7 @@ print('dx error: ', rel_error(dx_num, dx))
 
 assert rel_error(dx_num, dx) < 1e-8
 
-##########################################################################################################################################################
-# TODO (5) Train two-layer network on MNIST.
-##########################################################################################################################################################
+# Train two-layer network on MNIST.
 
 np.random.seed(231)
 N, D, H, C = 3, 5, 50, 7
