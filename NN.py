@@ -91,10 +91,7 @@ print('difference: ', rel_error(out, correct_out))
 
 assert rel_error(out, correct_out) < 1e-7
 
-##########################################################################################################################################################
-# TODO (4) Implement the backward pass for the ReLU activation function in the relu_backward function and test your implementation using the following.
-##########################################################################################################################################################
-
+# Implement the backward pass for the ReLU activation function in the relu_backward function 
 np.random.seed(231)
 x = np.random.randn(10, 10)
 dout = np.random.randn(*x.shape)
